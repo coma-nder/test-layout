@@ -1,0 +1,38 @@
+.advantages {
+  background: #20263E;
+  box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
+  margin-top: 30px;
+  padding: 20px 40px;
+  min-width: 356px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    &:nth-of-type(2) {
+      border-top: 1px solid #282F4B;
+      border-bottom: 1px solid #282F4B;
+    }
+
+    &-icon {
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+
+      @each $advantage in players, providers, games {
+        &.#{$advantage} {
+          background-image: url(../img/svg/advantages/#{$advantage}.svg);
+        }     
+      }
+    }
+
+    &-amount {
+      color: #87E389;
+      font-size: 55px;
+      font-weight: 700;
+    }
+  }
+}

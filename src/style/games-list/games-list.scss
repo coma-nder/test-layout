@@ -1,0 +1,131 @@
+$newGameColor: #8BEB01;
+$popularGameColor: #50FFE0;
+$recomendedGameColor: #4F00F7;
+
+$gameColors: ("new" : $newGameColor, "popular" : $popularGameColor, "recomended" : $recomendedGameColor);
+
+.games-list {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  .all-games + .main-game {
+    margin-left: 7px;
+  }
+
+  &--reversible {
+    flex-direction: row-reverse;
+
+    .all-games + .main-game {
+      margin-right: 7px;
+      margin-left: 0;
+    }
+  }
+}
+
+.game-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity ease .3s;
+}
+
+@each $type, $color in $gameColors {
+  .games-list--#{$type} {
+    .game-border {
+      box-shadow: 0px 0px 14px #{$color};
+      border: 5px solid #{$color};
+    }
+  }
+}
+
+.all-games {
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    min-width: 250px;
+    height: 188px;
+    margin-right: 7px;
+    margin-bottom: 8px;
+    border-radius: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(2n+1) {
+      background-image: url(../img/game-bg-1.png);
+    }
+    &:nth-of-type(2n) {
+      background-image: url(../img/game-bg-2.png);
+    }
+
+    & .btn {
+      position:absolute;
+      left:50%;
+      top: 40%;
+      transform:translate(-50%);
+      opacity: 0;
+      z-index: 10;
+    }
+
+    &:hover .btn {
+      opacity: 1;
+      z-index: 5;
+    }
+
+    &:hover .flag {
+      z-index: 1;
+    }
+
+    &:hover .game-border {
+      opacity: 1;
+      z-index: 3;
+    }
+  }
+}
+.main-game {
+  flex-grow: 1;
+  min-width: 493px;
+  height: 384px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 17px;
+  background-image: url(../img/big-game-bg.png);
+  cursor: pointer;
+
+  & .btn {
+    position:absolute;
+    left:50%;
+    top: 45%;
+    transform:translate(-50%);
+    opacity: 0;
+  }
+
+  &:hover .btn {
+    opacity: 1;
+    z-index: 5;
+  }
+
+  &:hover .flag {
+    z-index: 1;
+  }
+
+  &:hover .game-border {
+    opacity: 1;
+    z-index: 3;
+  }
+}

@@ -1,0 +1,55 @@
+.sign-up-wrapper {
+  width: 32%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/crystal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &::before {
+    width: 180px;
+    height: 173px;
+    top: -90px;
+    left: -120px;
+    transform: rotate(-164.47deg);
+  }
+
+  &::after {
+    width: 200px;
+    height: 193px;
+    right: 55px;
+    bottom: 25px;
+    transform: rotate(-6.73deg);
+  }
+}
+
+.sign-up {
+  margin-right: 130px;
+  text-align: center;
+  padding: 55px 0;
+
+  .title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 13px;
+  }
+
+  .sub-text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8C91BA;
+    
+    a {
+      color: #8C91BA;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.top-game {
+  min-width: 585px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__pic {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/mounth-game.png);
+    height: 360px;
+
+    &-info {
+      position: absolute;
+      width: 60%;
+      left: 50%;
+      margin-left: -30%;
+      bottom: 20px;
+
+      a {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 19px;
+        text-align: center;
+        text-decoration: underline;
+        color: #FFFFFF;
+      }
+
+      & .btn {
+        margin: 0 auto;
+        margin-top: 5px;
+      }
+    }
+  }
+}

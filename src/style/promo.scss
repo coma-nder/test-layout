@@ -1,0 +1,13 @@
+.promo {
+  width: 68%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -49px;
+    width: 49px;
+    height: 100%;
+    background: linear-gradient(270deg, #091024 0%, rgba(25, 32, 50, 0) 100%);
+  }
+}

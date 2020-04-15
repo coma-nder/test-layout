@@ -1,0 +1,26 @@
+.merchants {
+  margin: 0 30px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #172146;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+  &__item {
+    min-width: 100px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 40px;
+    margin-top: 20px;
+
+    &:nth-of-type(even) {
+      background-image: url(../img/svg/merchants/vivo-gaming.svg);
+    }
+    &:nth-of-type(odd) {
+      background-image: url(../img/svg/merchants/bet365.svg);
+    }
+  }
+}

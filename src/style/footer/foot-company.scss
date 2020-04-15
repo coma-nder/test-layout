@@ -1,0 +1,9 @@
+.foot-company {
+  display: flex;
+  flex-direction: column;
+  min-width: 25%;
+
+  & .adult {
+    margin-top: 30px;
+  }
+}

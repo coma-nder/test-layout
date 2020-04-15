@@ -1,0 +1,18 @@
+.payments {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    min-width: 165px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @each $payment in neteller, skrill, cubits, masterCard, visa, qiwi, yandexMoney  {
+      &.#{$payment} {
+        background-image: url(../img/svg/payments/#{$payment}.svg);
+      }
+    }
+  }
+}

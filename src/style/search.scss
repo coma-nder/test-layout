@@ -1,0 +1,37 @@
+$itemColor: #ffffff;
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 400px;
+
+  &__item {
+    border: 1px solid #898989;
+    padding: 4px 16px;
+    border-radius: 50px;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    font-size: 14px;
+    color: $itemColor;
+    &::placeholder {
+      color: $itemColor;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 12px;
+    bottom: 50%;
+    margin-bottom: -8px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/svg/search.svg);
+    cursor: pointer;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,91 @@
+$formTextColor: #8C91BA;
+
+.sign-up-form {
+  margin: 10px 0;
+
+  &__item {
+    margin-bottom: 13px;
+    border: 1px solid #32448C;
+    // box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    background: transparent;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px 14px 6px 14px;
+    color: $formTextColor;
+    
+    &::placeholder {
+      color: $formTextColor;
+    }
+  }
+
+  &__select {
+    border-radius: 7px;
+  }
+
+  .form-wrapp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &__check {
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    & label {
+      font-size: 12px;
+      line-height: 14px;
+      color: $formTextColor;
+
+      a {
+        text-decoration: underline;
+        color: $formTextColor;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    
+  }
+}
+
+.sign-up-form input[type=email] {
+  width: 100%;
+}
+.sign-up-form input[type=submit] {
+  text-align: center;
+  margin: 27px auto 7px auto;
+}
+.form-input-group input {
+  width: 100%;
+}
+.form-input-group {
+  .input-button {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 10;
+    right: 12px;
+    bottom: 50%;
+  }
+  .input-button-pass {
+    width: 18px;
+    height: 12px;
+    background-image: url(../img/svg/eye.svg);
+  }
+  .input-button-code {
+    width: 18px;
+    height: 12px;
+    background-image: url(../img/svg/question.svg);
+  }
+
+  &__pass {
+    width: 70%;
+  }
+}
+
+

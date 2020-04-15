@@ -1,0 +1,33 @@
+.providers-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__item {
+    border: 1px solid #282F4B;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #8187AD;
+    cursor: pointer;
+    margin-right: 20px;
+
+    & a {
+      color: #8187AD;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &--current {
+      a {
+        color: #ffffff;
+      }
+      border: 1px solid #D73649;
+    }
+     
+  }
+}

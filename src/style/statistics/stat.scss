@@ -1,0 +1,62 @@
+.stat {
+  min-width: 585px;
+
+  .title {
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .stat-table {
+    background: #182237;
+
+    table {
+      vertical-align: middle;
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      width: 33%;
+      padding: 7px 0 11px 0;
+    }
+
+    thead {
+      color: #8C91BA;
+      background: #222C42;
+      font-weight: 500;
+    }
+    tbody {
+      font-weight: normal;
+      font-size: 14px;
+      text-align: center;
+      color: #FFFFFF;
+
+      tr:nth-of-type(2n) {
+        background: #222C42;
+      }
+
+      tr:first-child {
+        background: linear-gradient(180deg, rgba(10, 17, 37, 0.5) 0%, rgba(26, 33, 51, 0) 23.58%);
+      }
+      
+      td:nth-of-type(2) {
+        text-decoration: underline;
+        cursor: pointer;
+
+        a {
+          color: #FFFFFF;
+          text-decoration: underline;
+        }
+      }
+
+      td:nth-of-type(3) {
+        font-weight: bold;
+      }
+    }
+  }
+}

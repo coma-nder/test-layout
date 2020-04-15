@@ -1,0 +1,43 @@
+.container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.games-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__item {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: #ffffff;
+    }
+    padding: 5px 0;
+    padding-left: 35px;
+
+    @each $category in new, popular, slots, live, table, favorite, last {
+      &.#{$category} {
+        background-image: url(../img/svg/games-categories/#{$category}.svg);
+      }
+    }
+
+  }
+
+  &__item.all-cat {
+    background-position: 95% 50%;
+    background-image: url(../img/svg/all-cat.svg);
+    padding-left: 0;
+    padding-right: 35px;
+  }
+}

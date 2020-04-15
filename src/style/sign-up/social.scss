@@ -1,0 +1,26 @@
+$itemSize: 35px;
+
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  a {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $itemSize;
+    height: $itemSize;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @each $socialNetworkIcon in arroba, odn, facebook, vk, googlePlus {
+      &.#{$socialNetworkIcon} {
+        background-image: url(../img/svg/social/#{$socialNetworkIcon}.svg);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$btnPrimaryColor: #87e389;
+
+.btn {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+
+  & + & { 
+    margin-left: 20px; 
+  }
+
+  &--l {
+    padding: 6px 25px;
+  }
+  &--m {
+    padding: 4px 25px;
+    font-size: 14px;
+  }
+  &--s {
+    padding: 2px 25px;
+    font-size: 14px;
+  }
+
+  &--primary {
+    background-color: $btnPrimaryColor;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 500;
+  }
+}
